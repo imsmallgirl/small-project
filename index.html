@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmallProject</title>
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/calculator.css">
+    <!-- script cdn -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
+    <!-- font & icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://webfontworld.github.io/Montserrat/Montserrat.css" rel="stylesheet">
+    <script src="//glenthemes.github.io/iconsax/geticons.js"></script>
+    <link href="//glenthemes.github.io/iconsax/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Small<span>Project</span></h1>
+        <nav id="projects-tab">
+            <h2>MENU</h2>
+            <div id="project-lists">
+                <dl>
+                    <dt class="iconsax" icon-name="color-swatch"></dt>
+                    <dd>Color Flipper</dd>
+                </dl>
+                <dl>
+                    <dt class="iconsax" icon-name="calculator"></dt>
+                    <dd>Calculator</dd>
+                </dl>
+                <dl>
+                    <dt class="iconsax" icon-name="pop-out"></dt>
+                    <dd>Modal</dd>
+                </dl>
+                <dl>
+                    <dt class="iconsax" icon-name="clock"></dt>
+                    <dd>Timer</dd>
+                </dl>
+                <dl>
+                    <dt class="iconsax" icon-name="text"></dt>
+                    <dd>Make Lorem ipsum</dd>
+                </dl>
+                <dl>
+                    <dt class="iconsax" icon-name="slider"></dt>
+                    <dd>Slider & Carousel</dd>
+                </dl>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="color">
+            <div class="section-info">
+                <dl class="info-text">
+                    <dt>Color Flipper</dt>
+                    <dd>1. DOM을 다루는 방법을 공부하기 위해 만든 Color Flipper 기능입니다.</dd>
+                    <dd>2. 새로고침을 하지 않아도 랜덤으로 배경색을 바꿀 수 있는 기능을 갖고 있습니다.</dd>
+                    <dd>3. 바뀐 색상 코드를 클릭해서 클립보드로 복사하는 기능도 추가하였습니다.</dd>
+                </dl>
+                <div class="info-skill">
+                    <p>Use Skill</p>
+                    <ul>
+                        <li>Math.round()</li>
+                        <li>Math.random()</li>
+                        <li>clipboard.js</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="color-contents">
+                <div id="colors"></div>
+                <div id="colors-info">
+                    <p id="colors-text"
+                    data-clipboard-target="#colors-text">
+                    background-color : #025eff;
+                    </p>
+                    <p id="copy-popup">Copy!</p>
+                    <button id="color-btn">CHANGE COLOR</button>
+                </div>
+            </div>
+        </section>
+        <!-- // color -->
+
+        <section id="calculator" class="section-on">
+            <div class="section-info">
+                <dl class="info-text">
+                    <dt>Calculator</dt>
+                    <dd>1. DOM을 다루는 방법을 공부하기 위해 만든 계산기 기능입니다.</dd>
+                    <dd>2. 사칙 연산과, 여러 조건문을 활용해서 제작했습니다.</dd>
+                    <dd>3. 리셋 기능, 연산 기능을 사용할 수 있습니다.</dd>
+                </dl>
+                <div class="info-skill">
+                    <p>Use Skill</p>
+                    <ul>
+                        <li>if문</li>
+                        <li>switch문</li>
+                        <li>object</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div id="calc">
+                <ul id="cal-head">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <div id="cal-results">
+                    <p id="cal-value">300</p>
+                </div>
+                <div class="cal-body cal-first">
+                    <button value="AC">AC</button>
+                    <button value="%">%</button>
+                    <button value="+/-">+/-</button>
+                    <button value="÷">÷</button>
+                </div>
+                <div class="cal-body">
+                    <button value="7">7</button>
+                    <button value="8">8</button>
+                    <button value="9">9</button>
+                    <button value="X">X</button>
+                </div>
+                <div class="cal-body">
+                    <button value="4">4</button>
+                    <button value="5">5</button>
+                    <button value="6">6</button>
+                    <button value="-">-</button>
+                </div>
+                <div class="cal-body">
+                    <button value="1">1</button>
+                    <button value="2">2</button>
+                    <button value="3">3</button>
+                    <button value="+">+</button>
+                </div>
+                <div class="cal-body cal-last">
+                    <button value="0">0</button>
+                    <button value="=">=</button>
+                </div>
+            </div>
+        </section>
+        <!-- // calculator -->
+        <section id="modal">
+
+        </section>
+        <!-- // modal -->
+        <section id="timer">
+
+        </section>
+        <!-- // timer -->
+        <section id="make-text">
+
+        </section>
+        <!-- // make-text -->
+        <section id="slider">
+
+        </section>
+        <!-- // slider -->
+    </main>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/section.js"></script>
+    <script src="js/colorFlipper.js"></script>
+    <script src="js/calculator.js"></script>
+</body>
+</html>

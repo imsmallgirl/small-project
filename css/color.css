@@ -1,0 +1,90 @@
+
+
+#color-contents {
+    position: absolute;
+    top: 60%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    z-index: 10;
+}
+
+#color-contents #colors {
+    width: 300px;
+    height: 300px;
+    background-color: #025eff;
+    border-radius: 36% 64% 44% 56% / 35% 56% 44% 65% ;
+    transition: background-color .3s;
+}
+
+#color-contents #colors-info {
+    position: relative;
+}
+
+#color-contents #colors-info #colors-text{
+    font-weight: 500;
+    font-size: 20px;
+    color: #777;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+#color-contents #colors-info #colors-text:hover{
+    background-color: #eee;
+}
+
+#color-contents #colors-info #colors-text::selection{
+    background-color: transparent;
+}
+
+#color-contents #colors-info #copy-popup {
+    font-size: 18px;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    opacity: 0;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    background-color: rgba(2, 94, 255, .5);
+    color: #fff;
+    padding: 5px 10px;
+}
+
+#color-contents #colors-info #copy-popup.copy-on{
+    animation: copy-popup 4s;
+}
+
+@keyframes copy-popup {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+#color-contents #colors-info #color-btn {
+    margin-top: 20px;
+    border: none;
+    width: 100%;
+    padding: 10px 0;
+    border-radius: 5px;
+    background-color: rgba(2, 94, 255, .1);
+    color:#777;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+#color-contents #colors-info #color-btn:hover{
+    background-color: rgba(2, 94, 255, .6);
+    color:#fff;
+}
