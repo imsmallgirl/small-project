@@ -1,0 +1,81 @@
+#count-down .contents-wrap{
+}
+
+#count {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#count #count-event-title{
+    font-size: 40px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+#count #count-form {
+    display: flex;
+    align-items: center;
+}
+
+#count #count-form #count-inputs {
+    display: flex;
+}
+
+#count #count-form input{
+    border: none;
+    background-color: transparent !important;
+    padding: 20px;
+    color:#555;
+    font-size: 20px;
+    margin: 0 20px;
+    outline: none;
+}
+
+#count #count-form #count-submit {
+    padding: 10px 30px;
+    border-radius: 30px;
+    border: none;
+    font-size: 20px;
+    background-color: transparent;
+    color:#555;
+    cursor: pointer;
+}
+
+#count #count-time {
+    padding: 30px;
+}
+
+#count #count-time ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+#count #count-time ul li {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 14px;
+    letter-spacing: .3em;
+    color:#777;
+    background-color: rgba(2, 94, 255,0.1);
+}
+
+#count #count-time ul li span {
+    font-size: 50px;
+    font-weight: bold;
+    color:#555;
+}
+
+#count #count-reset {
+    padding: 20px 40px;
+    border: none;
+    border-radius: 30px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: rgba(2, 94, 255,0.3);
+}

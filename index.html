@@ -11,11 +11,15 @@
     <link rel="stylesheet" href="css/color.css">
     <link rel="stylesheet" href="css/calculator.css">
     <link rel="stylesheet" href="css/date.css">
+    <link rel="stylesheet" href="css/count.css">
+
     <!-- script cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/plugins/confirmDate/confirmDate.min.css" integrity="sha512-i4miv4uj4m8CwmH7M2HfUr2BXzyLTmexzQi+e27yE+aXivR5iQ2urKV34j3rqNeZcesfmXAtSeLuFuaERTxgEA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/plugins/confirmDate/confirmDate.min.js" integrity="sha512-4WKKGGTnWlxFaoURIEl1as1Jv26hz56uc3WZMusBlx7JBO9NjYv7Cq1ThArvJ0fMSEY72YYr0AK0GyJHUC3mvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <!-- font & icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,7 +48,7 @@
                 </dl>
                 <dl>
                     <dt class="iconsax" icon-name="clock"></dt>
-                    <dd>Timer</dd>
+                    <dd>Count Down</dd>
                 </dl>
                 <dl>
                     <dt class="iconsax" icon-name="text"></dt>
@@ -75,16 +79,17 @@
                     </ul>
                 </div>
             </div>
-
-            <div id="color-contents">
-                <div id="colors"></div>
-                <div id="colors-info">
-                    <p id="colors-text"
-                    data-clipboard-target="#colors-text">
-                    background-color : #025eff;
-                    </p>
-                    <p id="copy-popup">Copy!</p>
-                    <button id="color-btn">CHANGE COLOR</button>
+            <div class="contents-wrap">
+                <div id="color-contents">
+                    <div id="colors"></div>
+                    <div id="colors-info">
+                        <p id="colors-text"
+                        data-clipboard-target="#colors-text">
+                        background-color : #025eff;
+                        </p>
+                        <p id="copy-popup">Copy!</p>
+                        <button id="color-btn">CHANGE COLOR</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -108,47 +113,50 @@
                 </div>
             </div>
             
-            <div id="calc">
-                <ul id="cal-head">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
-                <div id="cal-results">
-                    <p id="cal-value">300</p>
-                </div>
-                <div class="cal-body cal-first">
-                    <button value="AC">AC</button>
-                    <button value="%">%</button>
-                    <button value="+/-">+/-</button>
-                    <button value="÷">÷</button>
-                </div>
-                <div class="cal-body">
-                    <button value="7">7</button>
-                    <button value="8">8</button>
-                    <button value="9">9</button>
-                    <button value="X">X</button>
-                </div>
-                <div class="cal-body">
-                    <button value="4">4</button>
-                    <button value="5">5</button>
-                    <button value="6">6</button>
-                    <button value="-">-</button>
-                </div>
-                <div class="cal-body">
-                    <button value="1">1</button>
-                    <button value="2">2</button>
-                    <button value="3">3</button>
-                    <button value="+">+</button>
-                </div>
-                <div class="cal-body cal-last">
-                    <button value="0">0</button>
-                    <button value="=">=</button>
+            <div class="contents-wrap">
+                <div id="calc">
+                    <ul id="cal-head">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <div id="cal-results">
+                        <p id="cal-value">300</p>
+                    </div>
+                    <div class="cal-body cal-first">
+                        <button value="AC">AC</button>
+                        <button value="%">%</button>
+                        <button value="+/-">+/-</button>
+                        <button value="÷">÷</button>
+                    </div>
+                    <div class="cal-body">
+                        <button value="7">7</button>
+                        <button value="8">8</button>
+                        <button value="9">9</button>
+                        <button value="X">X</button>
+                    </div>
+                    <div class="cal-body">
+                        <button value="4">4</button>
+                        <button value="5">5</button>
+                        <button value="6">6</button>
+                        <button value="-">-</button>
+                    </div>
+                    <div class="cal-body">
+                        <button value="1">1</button>
+                        <button value="2">2</button>
+                        <button value="3">3</button>
+                        <button value="+">+</button>
+                    </div>
+                    <div class="cal-body cal-last">
+                        <button value="0">0</button>
+                        <button value="=">=</button>
+                    </div>
                 </div>
             </div>
+           
         </section>
         <!-- // calculator -->
-        <section id="date-picker" class="section-on">
+        <section id="date-picker">
             <div class="section-info">
                 <dl class="info-text">
                     <dt>Date-Picker</dt>
@@ -166,22 +174,85 @@
                 </div>
             </div>
 
-            <div id="date">
-                <dl>
-                    <dt><i class="iconsax" icon-name="calendar-search"></i></dt>
-                    <dd>
-                        <label>
-                            <span>Date/Time</span>
-                            <input type="text" id="datePicker" name="from" placeholder="Choose Date" readonly>
-                        </label>
-                    </dd>
-                </dl>
-                <button>Next</button>
+            <div class="contents-wrap">
+                <div class="date">
+                    <dl>
+                        <dt><i class="iconsax" icon-name="calendar-search"></i></dt>
+                        <dd>
+                            <label>
+                                <span>Date</span>
+                                <input type="text" id="datePicker" name="from" placeholder="Choose Date" readonly>
+                            </label>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="date">
+                    <dl>
+                        <dt><i class="iconsax" icon-name="calendar-search"></i></dt>
+                        <dd>
+                            <label>
+                                <span>Date/Time</span>
+                                <input type="text" id="dateTimePicker" name="from" placeholder="Choose Date and Time" readonly>
+                            </label>
+                        </dd>
+                    </dl>
+                </div>
             </div>
         </section>
         <!-- // modal -->
-        <section id="timer">
-
+        <section id="count-down" class="section-on">
+            <div class="section-info">
+                <dl class="info-text">
+                    <dt>Count Down</dt>
+                    <dd>1. vanilla JS를 연습하기 위해서 만든 count down timer 입니다.</dd>
+                    <dd>2. localStorage 를 활용해서, 사용자가 작성해놨던 이벤트와 디데이를 다시 접속해서 이용할 수 있도록 했습니다.</dd>
+                    <dd>3. 이벤트와 디데이 기능을 사용할 수 있습니다.</dd>
+                </dl>
+                <div class="info-skill">
+                    <p>Use Skill</p>
+                    <ul>
+                        <li>setInterval()</li>
+                        <li>new Date()</li>
+                        <li>localStorage</li>
+                        <li>clearInterval()</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="contents-wrap">
+                <div id="count">
+                    <h2 id="count-event-title">
+                        create an event</h2>
+                    <form id="count-form">
+                        <div id="count-inputs">
+                            <input id="count-date" type="text" placeholder="날짜를 선택해주세요!">
+                            <input id="count-event" type="text" placeholder="이벤트 이름을 적어주세요!">
+                        </div>
+                        <button id="count-submit" type="submit">SEND</button>
+                    </form>
+                    <div id="count-time">
+                        <ul>
+                            <li>
+                                <span id="day">00</span>
+                                DAYS
+                            </li>
+                            <li>
+                                <span id="hour">00</span>
+                                HOURS
+                            </li>
+                            <li>
+                                <span id="minute">00</span>
+                                MINUTES
+                            </li>
+                            <li>
+                                <span id="second">00</span>
+                                SECONDS
+                            </li>
+                        </ul>
+                    </div>
+                    <button id="count-reset" disabled>Reset</button>
+                </div>
+            </div>
         </section>
         <!-- // timer -->
         <section id="make-text">
@@ -197,7 +268,7 @@
     <script src="js/section.js"></script>
     <script src="js/colorFlipper.js"></script>
     <script src="js/calculator.js"></script>
-    <script type="module" src="js/date.js">
-    </script>
+    <script type="module" src="js/date.js"></script>
+    <script src="js/countdown.js"></script>
 </body>
 </html>

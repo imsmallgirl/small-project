@@ -1,17 +1,17 @@
-#date {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+.date {
     padding: 20px 30px;
     background-color: #fff;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 50px;
 }
 
-#date dl {
+.date dl.date-on {
+    background-color: rgba(2, 94, 255, .1);
+}
+
+.date dl {
+    width: 100%;
     display: flex;
     align-items:center;
     padding: 20px;
@@ -20,7 +20,7 @@
     transition: background-color .3s;
 }
 
-#date dl dt {
+.date dl dt {
     padding: 30px;
     border-radius: 50%;
     background-color: rgba(2, 94, 255, .1);
@@ -28,30 +28,31 @@
     transition: background-color .3s;
 }
 
-#date dl dt i{
+.date dl dt i{
     --Iconsax-Size:28px;
     --Iconsax-Color:#025eff;
     transition: .3s;
 }
 
-#date dl dt.date-on i {
+.date dl dt i {
     --Iconsax-Color:#666;
 }
 
-#date dl dd label {
-    display: flex;
-    flex-direction: column;
+.date dl dd label {
+    width: 100%;
     cursor: pointer;
 }
 
-#date dl dd label span{
+.date dl dd label span{
+    display: block;
     font-size: 14px;
     color:#666;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
-#date dl dd label input {
+.date dl dd label input {
+    word-wrap: break-word;
     background-color: transparent;
     font-weight: 600;
     border: none;
@@ -59,13 +60,4 @@
     font-size: 24px;
     color:#555;
     cursor: pointer !important;
-}
-
-#date>button {
-    padding: 20px 50px;
-    border-radius: 50px;
-    border: none;
-    background-color: #025eff;
-    color: #fff;
-    cursor: pointer;
 }
