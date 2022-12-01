@@ -1,4 +1,5 @@
 #count-down .contents-wrap{
+    position: relative;
 }
 
 #count {
@@ -16,6 +17,22 @@
 #count #count-form {
     display: flex;
     align-items: center;
+}
+
+#count #count-form.count-out {
+    animation: count-out 1s forwards;
+}
+
+@keyframes count-out {
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-30px);
+        visibility: hidden;
+    }
 }
 
 #count #count-form #count-inputs {
@@ -78,4 +95,72 @@
     font-size: 18px;
     cursor: pointer;
     background-color: rgba(2, 94, 255,0.3);
+}
+
+#count-end {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.2);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 5s;
+}
+
+#count-end.count-popup{
+    animation: count-popup 5s forwards;
+}
+
+#count-end.count-popup dl {
+    animation: count-popup2 5s forwards;
+}
+
+@keyframes count-popup {
+    0%{
+        opacity: 0;
+        visibility: hidden;
+    }
+    50%{
+        opacity: 1;
+        visibility: visible;
+    }
+    100%{
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes count-popup2 {
+    0%{
+        transform: translate(-50%, -70%);
+    }
+    100%{
+        transform: translate(-50%, -50%);
+    }
+}
+
+#count-end dl {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    padding: 30px;
+    text-align: center;
+}
+
+
+
+#count-end dl dt {
+    font-size: 30px;
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#count-end dl dd {
+    font-size: 20px;
+    color:#777;
 }

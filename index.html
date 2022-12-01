@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmallProject</title>
+    <title>Small JS Project</title>
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
     <!-- css -->
     <link rel="stylesheet" href="css/common.css">
@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/calculator.css">
     <link rel="stylesheet" href="css/date.css">
     <link rel="stylesheet" href="css/count.css">
+    <link rel="stylesheet" href="css/makeLorem.css">
+    <link rel="stylesheet" href="css/slider.css">
 
     <!-- script cdn -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js"></script>
@@ -19,8 +21,10 @@
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/plugins/confirmDate/confirmDate.min.css" integrity="sha512-i4miv4uj4m8CwmH7M2HfUr2BXzyLTmexzQi+e27yE+aXivR5iQ2urKV34j3rqNeZcesfmXAtSeLuFuaERTxgEA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/plugins/confirmDate/confirmDate.min.js" integrity="sha512-4WKKGGTnWlxFaoURIEl1as1Jv26hz56uc3WZMusBlx7JBO9NjYv7Cq1ThArvJ0fMSEY72YYr0AK0GyJHUC3mvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- font & icons -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -30,7 +34,7 @@
 </head>
 <body>
     <header>
-        <h1>Small<span>Project</span></h1>
+        <h1>Small JS <span>Project</span></h1>
         <nav id="projects-tab">
             <h2>MENU</h2>
             <div id="project-lists">
@@ -200,13 +204,15 @@
             </div>
         </section>
         <!-- // modal -->
-        <section id="count-down" class="section-on">
+        <section id="count-down">
             <div class="section-info">
                 <dl class="info-text">
                     <dt>Count Down</dt>
                     <dd>1. vanilla JS를 연습하기 위해서 만든 count down timer 입니다.</dd>
                     <dd>2. localStorage 를 활용해서, 사용자가 작성해놨던 이벤트와 디데이를 다시 접속해서 이용할 수 있도록 했습니다.</dd>
-                    <dd>3. 이벤트와 디데이 기능을 사용할 수 있습니다.</dd>
+                    <dd>3. 이벤트가 끝났을 시, 팝업으로 이벤트가 끝남을 알려줍니다.</dd>
+                    <dd>4. Reset 버튼을 클릭 시, localStorage에 있는 데이터들도 삭제되며 초기화 될 수 있도록 했습니다.</dd>
+                    <dd>5. Reset 버튼은 카운트다운이 실행되고 있는 동안에만 사용가능하게 구현했습니다.</dd>
                 </dl>
                 <div class="info-skill">
                     <p>Use Skill</p>
@@ -252,15 +258,120 @@
                     </div>
                     <button id="count-reset" disabled>Reset</button>
                 </div>
+                <div id="count-end">
+                    <dl>
+                        <dt id="count-end-title"></dt>
+                        <dd>이벤트가 종료되었습니다.</dd>
+                    </dl>
+                </div>
             </div>
         </section>
         <!-- // timer -->
-        <section id="make-text">
 
+        <section id="make-lorem">
+            <div class="section-info">
+                <dl class="info-text">
+                    <dt>Make Lorem ipsum</dt>
+                    <dd>1. Axios 를 사용해, API 불러오는 방법을 연습하기 위해서 만든 Make Lorem Ipsum 입니다.</dd>
+                    <dd>2. 원하는 수만큼 단락과 단어를 선택해서 text 를 받아올 수 있는 기능입니다.</dd>
+                    <dd>3. API의 data를 받을 동안에 로딩화면이 보일 수 있도록 구현했습니다.</dd>
+                    <dd>4. 외부에서 data 를 받아오기때문에, 코드를 비동기처리하기위해서, async와 await 를 사용했습니다.</dd>
+                    <dd>5. 데이터를 받아오는 도중에 에러가 발생할 경우, 사용자에게 보여주기 위해서, catch 문을 사용했습니다.</dd>
+                </dl>
+                <div class="info-skill">
+                    <p>Use Skill</p>
+                    <ul>
+                        <li>Axios</li>
+                        <li>async, await</li>
+                        <li>then()</li>
+                        <li>catch()</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="contents-wrap">
+                <div id="make-text">
+                    <h2>Make Lorem ipsum</h2>
+                    <dl>
+                        <dt>
+                            <select name="select-text-type" id="select-text-type">
+                                <option value="paragraphs">Paragraphs</option>
+                                <option value="words">Words</option>
+                            </select>
+                        </dt>
+                        <dd>
+                            <input id="make-number" type="number" placeholder="number">
+                        </dd>
+                        <dd>
+                            <button id="make-text-btn">MAKE</button>
+                        </dd>
+                    </dl>
+                    <div class="loading-container">
+                        <div class="loading"></div>
+                        <div id="loading-text">loading</div>
+                    </div>
+                    <p id="text-result"></p>
+                </div>
+            </div>
         </section>
         <!-- // make-text -->
         <section id="slider">
+            <div class="section-info">
+                <dl class="info-text">
+                    <dt>Slider & Carousel</dt>
+                    <dd>1. web ui 에서 가장 많이 사용되는 slider의 심화버전을 연습하기 위해서 만든 Slider & Carousel 입니다.</dd>
+                    <dd>2. Touch Slider 는 드래그를 하면, 드래그 방향으로 슬라이드가 넘어가도록 하였습니다.</dd>
+                    <dd>3. Middle Slider 는 현재 index의 슬라이드가 강조될 수 있도록 구현했고, 무한 슬라이드처럼 보이도록 했습니다.</dd>
+                </dl>
+                <div class="info-skill">
+                    <p>Use Skill</p>
+                    <ul>
+                        <li>forEach</li>
+                        <li>mousedown</li>
+                        <li>mouseup</li>
+                        <li>pageX</li>
+                        <li>window.onload</li>
+                    </ul>
+                </div>
+            </div>
 
+            <div class="contents-wrap">
+                <h2>Touch Slide</h2>
+                <div id="touch-slider-wrap">
+                    <ul id="touch-slider">
+                        <li>1</li>
+                        <li>2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li>5</li>
+                    </ul>
+                    <ul id="touch-btn">
+                        <li id="touch-left" class="xi-angle-left"></li>
+                        <li id="touch-right" class="xi-angle-right"></li>
+                    </ul>
+                    <ul id="touch-nav">
+                        <li class="touch-nav-on"></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                <!-- //touch -->
+                <h2>Middle Slide</h2>
+                <div id="middle-slider-wrap">
+                    <ul id="middle-slider">
+                        <li class="middle-current">1</li>
+                        <li class="middle-next">2</li>
+                        <li>3</li>
+                        <li>4</li>
+                        <li class="middle-prev">5</li>
+                    </ul>
+                    <ul id="middle-btn">
+                        <li id="middle-left" class="xi-angle-left"></li>
+                        <li id="middle-right" class="xi-angle-right"></li>
+                    </ul>
+                </div>
+            </div>
         </section>
         <!-- // slider -->
     </main>
@@ -268,7 +379,9 @@
     <script src="js/section.js"></script>
     <script src="js/colorFlipper.js"></script>
     <script src="js/calculator.js"></script>
-    <script type="module" src="js/date.js"></script>
+    <script src="js/date.js"></script>
     <script src="js/countdown.js"></script>
+    <script src="js/makeLorem.js"></script>
+    <script src="js/slider.js"></script>
 </body>
 </html>

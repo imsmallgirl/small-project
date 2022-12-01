@@ -1,1 +1,1 @@
-{"type":"module","dependencies":{"clipboard":"^2.0.11","flatpickr":"^4.6.13"}}
+{"dependencies":{"clipboard":"^2.0.11","flatpickr":"^4.6.13"}}
