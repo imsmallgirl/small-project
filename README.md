@@ -1,7 +1,7 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=Small%JS%Project&fontSize=90&animation=twinkling&fontColor=555555)
 
 
-## :information_desk_person:&nbsp;  Demo
+## :information_desk_person:&nbsp;  Demo Site
 * [https://imsmallgirl.github.io/small-project/](https://imsmallgirl.github.io/small-project/)
 
 ### :books:&nbsp; 사용 언어
