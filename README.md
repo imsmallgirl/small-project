@@ -1,4 +1,9 @@
 ![header](https://capsule-render.vercel.app/api?type=waving&color=auto&height=300&section=header&text=Small%JS%Project&fontSize=90&animation=twinkling&fontColor=555555)
+
+
+## :information_desk_person:&nbsp;  Demo
+* [https://imsmallgirl.github.io/small-project/](https://imsmallgirl.github.io/small-project/)
+
 ### :books:&nbsp; 사용 언어
 <!-- 주석 -->
 <img src="https://img.shields.io/badge/HTML5-EC6231?style=flat-square&logo=html5&logoColor=white"/> <img src="https://img.shields.io/badge/CSS3-3795ce?style=flat-square&logo=css3&logoColor=white"/> <img src="https://img.shields.io/badge/JAVASCRIPT-f8c327?style=flat-square&logo=javascript&logoColor=white"/>
