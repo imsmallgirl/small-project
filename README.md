@@ -20,21 +20,21 @@
 * DOM 을 다루는 방법을 공부하기 위해서 만든 랜덤 색상 추출 기능입니다.
 * 바뀐 색상 코드를 css에 사용할 수 있도록 코드를 누르면, 복사가 되는 clipboard.js 라이브러리도 사용했습니다.
 <!-- 주석 -->
-<img src="https://im.ezgif.com/tmp/ezgif-1-594b63fc63.gif">
+<img src="https://im.ezgif.com/tmp/ezgif-1-6b85c70788.gif">
 
 
 > Calculator
 * DOM과 연산자, 조건문을 공부하기 위해서 만든 계산기 기능입니다.
 * 리셋 기능과, 여러 연산 기능을 사용할 수 있도록 했습니다.
 <!-- 주석 -->
-<img src="https://im.ezgif.com/tmp/ezgif-1-d4044d9789.gif">
+<img src="https://im.ezgif.com/tmp/ezgif-1-6a3b0ac1f7.gif">
 
 
 > Date - Picker
 * 오픈 소스 라이브러리를 사용하는 방법을 연습하기 위해서 만든 날짜 선택 기능입니다.
 * 여러 날짜를 한번에 선택 가능하고, 날짜와 시간을 지정할 수 있습니다.
 <!-- 주석 -->
-<img src="https://im.ezgif.com/tmp/ezgif-1-9271244134.gif">
+<img src="https://im.ezgif.com/tmp/ezgif-1-5715d2e2c7.gif">
 
 
 > Count Down
@@ -43,7 +43,8 @@
 * 이벤트가 끝났을 시엔, 팝업으로 이벤트가 끝남을 알려줍니다.
 * Reset 버튼을 클릭 시 , localStorage 에 있던 이벤트들이 삭제되며, 전체 초기화가 이루어질 수 있도록 했습니다.
 <!-- 주석 -->
-<img src="https://im.ezgif.com/tmp/ezgif-1-bd98f1034f.gif">
+<img src="https://im.ezgif.com/tmp/ezgif-1-72d22b5ba6.gif">
+<img src="https://im.ezgif.com/tmp/ezgif-1-e1bce13365.gif">
 
 
 > Make Lorem Ipsum
