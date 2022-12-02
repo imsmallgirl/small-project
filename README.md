@@ -41,10 +41,18 @@
 <img src="https://im.ezgif.com/tmp/ezgif-1-bd98f1034f.gif">
 
 
-> Count Down
+> Make Lorem Ipsum
 * Axios 를 사용해, API 불러오는 방법을 연습하기 위해서 만든 Make Lorem Ipsum 입니다.
 * 원하는 수만큼 단락과 단어를 선택해서 text 를 받아올 수 있는 기능입니다.
 * API의 data를 받을 동안에 로딩화면이 보일 수 있도록 구현했습니다.
 * 외부에서 data 를 받아오기때문에, 코드를 비동기처리하기위해서, async와 await 를 사용했습니다.
 <!-- 주석 -->
-<img src="https://im.ezgif.com/tmp/ezgif-1-c8dc6d5ccf.gif">
+<img src="https://im.ezgif.com/tmp/ezgif-1-c8dc6d5ccf.gif" width="800px">
+
+
+> Slider & Carousel
+* web ui 에서 가장 많이 사용되는 slider의 심화버전을 연습하기 위해서 만든 Slider & Carousel 입니다.
+* Touch Slider 는 드래그를 하면, 드래그 방향으로 슬라이드가 넘어가도록 하였습니다.
+* Middle Slider 는 현재 index의 슬라이드가 강조될 수 있도록 구현했고, 무한 슬라이드처럼 보이도록 했습니다.
+<!-- 주석 -->
+<img src="https://im.ezgif.com/tmp/ezgif-1-f277a04095.gif" width="800px">
